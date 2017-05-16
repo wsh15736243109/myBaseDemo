@@ -19,10 +19,12 @@ import java.lang.reflect.Method;
  */
 
 public abstract class BaseActivity extends FragmentActivity implements View.OnClickListener {
+    public String TAG = "BaseActivity";
     @Override
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        TAG = getClass().getName();
         initWindow();
         initData();
     }
@@ -101,6 +103,21 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
             e.printStackTrace();
         }
 
+    }
+
+    /**
+     * 获取状态栏高度
+     *
+     * @return
+     */
+    public int getStatusBarHeight() {
+        //获取status_bar_height资源的ID
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            //根据资源ID获取响应的尺寸值
+            return getResources().getDimensionPixelSize(resourceId);
+        }
+        return 0;
     }
 
 }
