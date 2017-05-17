@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import test.com.basedemo.activity.ActivityRefreshRecyclerView;
 import test.com.basedemo.activity.ActivityRefreshScrollView;
+import test.com.basedemo.activity.ActivityTransparentStatusBar;
 import test.com.basedemo.widget.TranslucentActionBar;
 
 
@@ -19,6 +20,7 @@ public class MainActivity extends BaseActivity {
     Button btn_refreshRecyclerView;
     Button btn_refreshgridView;
     Button btn_refreshscrollView;
+    Button btn_jianbian;
     private TranslucentActionBar actionBar;
     @Override
     protected int getLayoutId() {
@@ -55,6 +57,11 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_refreshscrollView:
                 intent = new Intent(this, ActivityRefreshScrollView.class);
+//                intent.putExtra("type","gridview");
+                startActivity(intent);
+                break;
+            case R.id.btn_jianbian:
+                intent = new Intent(this, ActivityTransparentStatusBar.class);
 //                intent.putExtra("type","gridview");
                 startActivity(intent);
                 break;

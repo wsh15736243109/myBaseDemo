@@ -43,6 +43,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="刷新的scrollView" />
+            <Button
+                android:id="@+id/btn_jianbian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="渐变状态栏" />
         </LinearLayout>
     </test.com.basedemo.widget.TranslucentScrollView>
 </LinearLayout>

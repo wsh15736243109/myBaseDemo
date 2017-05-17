@@ -18,7 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ActivityRefreshRecyclerView" />
-        <activity android:name=".activity.ActivityRefreshScrollView"></activity>
+        <activity android:name=".activity.ActivityRefreshScrollView" />
+        <activity android:name=".activity.ActivityTransparentStatusBar"
+            android:theme="@style/TranslucentTheme"></activity>
     </application>
 
 </manifest>
